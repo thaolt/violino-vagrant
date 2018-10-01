@@ -40,6 +40,11 @@ if ! [ -d "/home/vagrant/bin" ]; then
   sed -i 's/PATH=\\${PATH}\\:\\~\\/bin//g' /home/vagrant/.zshrc
   echo "PATH=\\${PATH}:~/bin" >> /home/vagrant/.zshrc
 fi
+
+if ! [ -d "/home/vagrant/violino-bsp" ]; then
+  su - vagrant -c "mkdir -p /home/vagrant/violino-bsp"
+  su - vagrant -c "cd /home/vagrant/violino-bsp && repo init -u https://github.com/SongPhi/violino-bsp.git -b master"
+fi
 SCRIPT
 
 Vagrant.configure("2") do |config|
