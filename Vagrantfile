@@ -2,7 +2,7 @@ $provision_script = <<-SCRIPT
 echo Provisioning...
 
 echo Update APT repository indexes
-# sudo apt-get update
+sudo apt-get update
 
 package_chk () {
   dpkg -s $1 > /dev/null 2>&1
