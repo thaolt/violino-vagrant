@@ -43,7 +43,7 @@ fi
 
 if ! [ -d "/home/vagrant/violino-bsp" ]; then
   su - vagrant -c "mkdir -p /home/vagrant/violino-bsp"
-  su - vagrant -c "cd /home/vagrant/violino-bsp && ~/bin/repo init -u https://github.com/SongPhi/violino-bsp.git -b master"
+  su - vagrant -c "cd /home/vagrant/violino-bsp && ~/bin/repo init -u https://github.com/thaolt/violino-bsp.git -b master"
 fi
 SCRIPT
 
